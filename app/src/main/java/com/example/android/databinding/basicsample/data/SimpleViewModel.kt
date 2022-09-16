@@ -36,6 +36,7 @@ class SimpleViewModel : ViewModel() {
     // popularity is exposed as LiveData using a Transformation instead of a @Bindable property.
     val popularity: LiveData<Popularity> = Transformations.map(_likes) {
         when {
+            it > 14 -> Popularity.HIGH
             it > 9 -> Popularity.STAR
             it > 4 -> Popularity.POPULAR
             else -> Popularity.NORMAL
@@ -50,5 +51,6 @@ class SimpleViewModel : ViewModel() {
 enum class Popularity {
     NORMAL,
     POPULAR,
-    STAR
+    STAR,
+    HIGH
 }

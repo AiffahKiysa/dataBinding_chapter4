@@ -30,26 +30,31 @@
 
         <TextView
             android:id="@+id/plain_name"
-            android:text="@{viewmodel.name}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="128dp"
+            android:fontFamily="cursive"
+            android:text="@{viewmodel.name}"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#000000"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name_label" />
 
         <TextView
             android:id="@+id/plain_lastname"
-            android:text="@{viewmodel.lastName}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="128dp"
+            android:fontFamily="cursive"
+            android:text="@{viewmodel.lastName}"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lastname_label" />
@@ -103,6 +108,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="@string/name_label"
+            android:textColor="#000000"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -113,6 +119,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="@string/last_name_label"
+            android:textColor="#000000"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/plain_name" />
 
@@ -148,5 +155,21 @@
             app:progressScaled="@{viewmodel.likes}"
             android:max="@{100}"
             app:progressTint="@{viewmodel.popularity}"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="label"
+            android:textColor="#010F5C"
+            android:textSize="20sp"
+            app:label="@{viewmodel.likes}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/like_button"
+            app:layout_constraintHorizontal_bias="0.464"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plain_lastname"
+            app:layout_constraintVertical_bias="0.09" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -21,4 +21,5 @@
     <color name="colorAccent">#ff4081</color>
     <color name="popular">#ff76a5</color>
     <color name="star">#ff0057</color>
+    <color name="high">#fc6600</color>
 </resources>
